@@ -12,6 +12,10 @@ jobs:
   echo-goodbye:
    runs-on: ubuntu-latest
    steps:
-    - run: echo "Failed step"
+    - name: Multi-line bash
+      run: |
+       echo "I"
+       echo "will"
+       echo "fail"
     - run: echo "Say goodbye"
    
