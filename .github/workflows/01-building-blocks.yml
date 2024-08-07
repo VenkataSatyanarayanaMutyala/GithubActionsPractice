@@ -10,7 +10,8 @@ jobs:
    steps:
     - run: echo "Say Hello"
   echo-goodbye:
-    runs-on: ibuntu_latest
-    steps:
-     - run: echo "Goodbye!"
+   runs-on: ubuntu-latest
+   steps:
+    - run: echo "Failed step"
+    - run: echo "Say goodbye"
    
