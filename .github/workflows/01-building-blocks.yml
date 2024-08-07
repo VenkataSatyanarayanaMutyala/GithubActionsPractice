@@ -1,7 +1,6 @@
 name: Building Blocks
 
 on:
- push:
  workflow_dispatch:
 
 jobs:
@@ -12,10 +11,6 @@ jobs:
   echo-goodbye:
    runs-on: ubuntu-latest
    steps:
-    - name: Multi-line bash
-      run: |
-       echo "I"
-       echo "will"
-       echo "fail"
+    - run: echo "exit with a zero code"
     - run: echo "Say goodbye"
    
