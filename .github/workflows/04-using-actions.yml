@@ -3,7 +3,7 @@ name: Using Actions
 on:
  push
 jobs:
-  build:
+  echo_java_mavenrepo:
    runs-on: ubuntu-latest
    steps:
      - uses: actions/checkout@v4
