@@ -12,7 +12,7 @@ jobs:
         java-version: '17'
         distribution: 'temurin'
      - name: Setup Maven Action
-       uses: s4u/setup-maven-action@< version >
+       uses: s4u/setup-maven-action@< default version >
 
      - run: mvn -V ...
        
