@@ -18,4 +18,6 @@ jobs:
  run-on-mac:
   runs-on: mac-latest
   steps:
-   - run: echo "It is running on $RUNNER_OS"
+      - name: shell
+        shell: bash
+        run: echo "It is running on $RUNNER_OS"
