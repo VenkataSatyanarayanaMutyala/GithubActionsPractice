@@ -3,7 +3,7 @@ name: Using Actions
 on:
  push
 jobs:
-  echo_java_mavenrepo:
+  echo_build:
    runs-on: ubuntu-latest
    steps:
      - uses: actions/checkout@v4
@@ -11,9 +11,10 @@ jobs:
        with:
         java-version: '17'
         distribution: 'temurin'
-     - name: Setup Maven Action
-       uses: s4u/setup-maven-action@< 3.8.2 >
-
-     - run: mvn -V ...
-       
+     - run: mvn --batch-mode --update-snapshots verify
+     - run: mkdir staging && cp target/*.jar staging
+     - uses: actions/upload-artifact@v4
+       with:
+         name: Package
+         path: staging
      
