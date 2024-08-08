@@ -11,6 +11,9 @@ jobs:
        with:
         java-version: '17'
         distribution: 'temurin'
-     - run: mvn --batch-mode --update-snapshots verify
-     - run: mkdir staging && cp target/*.jar staging
+     - name: Setup Maven Action
+       uses: s4u/setup-maven-action@< version >
+
+     - run: mvn -V ...
+       
      
